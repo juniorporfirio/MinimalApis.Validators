@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleWithValidatorDataAnn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleWithValidatorFluentValidation", "samples\ExampleWithValidatorFluentValidation\ExampleWithValidatorFluentValidation.csproj", "{A8E91266-7A8D-400C-A4E0-40FA0BDDA055}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{404C02DF-5DD9-43D6-B80C-E7EFA791A9A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalApis.Validators.DataAnnotation.Test", "tests\MinimalApis.Validators.DataAnnotation.Test\MinimalApis.Validators.DataAnnotation.Test.csproj", "{09823965-6FBA-45E1-9D7E-698394B6CE17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalApis.Validators.FluentValidation.Test", "tests\MinimalApis.Validators.FluentValidation.Test\MinimalApis.Validators.FluentValidation.Test.csproj", "{1A86F9F0-7B23-4463-9F9B-875B03CC4872}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,10 +40,20 @@ Global
 		{A8E91266-7A8D-400C-A4E0-40FA0BDDA055}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8E91266-7A8D-400C-A4E0-40FA0BDDA055}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8E91266-7A8D-400C-A4E0-40FA0BDDA055}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09823965-6FBA-45E1-9D7E-698394B6CE17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09823965-6FBA-45E1-9D7E-698394B6CE17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09823965-6FBA-45E1-9D7E-698394B6CE17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09823965-6FBA-45E1-9D7E-698394B6CE17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A86F9F0-7B23-4463-9F9B-875B03CC4872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A86F9F0-7B23-4463-9F9B-875B03CC4872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A86F9F0-7B23-4463-9F9B-875B03CC4872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A86F9F0-7B23-4463-9F9B-875B03CC4872}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9457288F-3116-43A8-B587-9D7163D4946E} = {B3D2E7CD-83FB-414B-8B31-8DDA2432457B}
 		{574452F7-FD1E-45EF-99AB-7D3F8423B799} = {30F40C86-F7C5-4D05-B3E7-711FF61F8342}
 		{A8E91266-7A8D-400C-A4E0-40FA0BDDA055} = {30F40C86-F7C5-4D05-B3E7-711FF61F8342}
+		{09823965-6FBA-45E1-9D7E-698394B6CE17} = {404C02DF-5DD9-43D6-B80C-E7EFA791A9A0}
+		{1A86F9F0-7B23-4463-9F9B-875B03CC4872} = {404C02DF-5DD9-43D6-B80C-E7EFA791A9A0}
 	EndGlobalSection
 EndGlobal

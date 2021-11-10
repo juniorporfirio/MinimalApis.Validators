@@ -13,6 +13,9 @@
   <ItemGroup>
     <Using Include="MiminalApis.Validators" />
     <Using Include="System.ComponentModel.DataAnnotations" />
+    <InternalsVisibleTo  Include="MinimalApis.Validators.DataAnnotation.Test" />
   </ItemGroup>
+
+
 
 </Project>

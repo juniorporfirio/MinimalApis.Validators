@@ -10,6 +10,7 @@
     <Using Include="MiminalApis.Validators.FluentValidation" />
     <Using Include="FluentValidation" />
     <Using Include="FluentValidation.AspNetCore" />
+   <InternalsVisibleTo  Include="MinimalApis.Validators.FluentValidation.Test" />
   </ItemGroup>
 
  <ItemGroup>

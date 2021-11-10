@@ -4,15 +4,26 @@ builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
 
 var app = builder.Build();
 
-app.MapPost("/customer",(Customer customer) =>
-{
-    return Results.Created(nameof(customer),customer);
-}).WithValidator<Customer>();
+app.MapPost("/customer", (Customer customer) =>
+ {
+     return Results.Created(nameof(customer), customer);
+ }).WithValidator<Customer>();
 
-app.Run("http://localhost:5005");
+app.Run();
 
 public class Customer
 {
+    public Customer()
+    {
+
+    }
+    public Customer(string name, int age, string email)
+    {
+        Name = name;
+        Age = age;
+        Email = email;
+
+    }
     public string Name { get; set; } = "";
     public int Age { get; set; }
     public string Email { get; set; } = "";

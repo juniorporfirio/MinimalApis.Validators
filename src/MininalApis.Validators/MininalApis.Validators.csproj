@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Description>A set of extensions to simplify the validation in MinimalApis, inspire in Nick Chapsas</Description>
+    <PackageTags>ASP.NET Web MinimalApis Apis REST Validation Validator FluentValidation DataAnnotation</PackageTags>
+  </PropertyGroup>
+
+<ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  <Using Include="System" />
+  <Using Include="System.Linq" />
+  <Using Include="System.Collections.Generic" />
+  <Using Include="Microsoft.AspNetCore.Http" />
+  <Using Include="Microsoft.AspNetCore.Builder" />
+  <Using Include="Microsoft.Extensions.DependencyInjection" />
+  <Using Include="System.ComponentModel.DataAnnotations" />
+  <Using Alias="Fluent" Include="FluentValidation" />
+</ItemGroup>
+
+<ItemGroup>
+  <PackageReference Include="FluentValidation" Version="10.3.4" />
+</ItemGroup>
+
+</Project>

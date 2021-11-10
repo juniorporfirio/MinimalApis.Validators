@@ -1,0 +1,19 @@
+POST http://localhost:5010/customer HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "age":30,
+    "email":"johndoe@gmail.com"
+}
+
+###
+//BadRequest validation
+POST http://localhost:5010/customer HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "age":30,
+    "email":""
+}

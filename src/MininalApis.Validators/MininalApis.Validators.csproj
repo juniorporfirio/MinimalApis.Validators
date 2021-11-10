@@ -4,7 +4,8 @@
     <TargetFramework>net6.0</TargetFramework>
     <IsPackable>true</IsPackable>
     <Version>1.0.0</Version>
-    <Authors>Junior Porfirio </Authors>
+    <Authors>Junior Porfirio</Authors>
+    <RepositoryUrl>https://github.com/juniorporfirio/MinimalApis.Validators</RepositoryUrl>
     <Description>A set of extensions to simplify the validation in MinimalApis, inspire in Nick Chapsas</Description>
     <PackageTags>ASP.NET Web MinimalApis Apis REST Validation Validator FluentValidation DataAnnotation</PackageTags>
   </PropertyGroup>

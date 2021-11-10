@@ -29,7 +29,7 @@ jobs:
       run: dotnet test --no-build --verbosity normal
       
     - name: Pack
-      run: dotnet pack --configuration Release --output finalpackage --verbosity d
+      run: dotnet pack --configuration Release --output finalpackage --verbosity d --no-restore
       
     - name: Publish artifact
       uses: actions/upload-artifact@master
@@ -54,13 +54,16 @@ jobs:
           dotnet-version: ${{ env.DOTNETSDKVERSION }}
 
       - name: Add GitHub Package Repository source
-        run: dotnet nuget add source --username  ${{ secrets.USERNAME }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github ${{ secrets.URI_PACKAGE }}
+        run: dotnet nuget add source --username  ${{ secrets.USERNAME }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github ${{ secrets.URI_PACKAGE }}   
 
       - name: Push to GitHub Packages
         run: dotnet nuget push **/*.nupkg --skip-duplicate --no-symbols true -s "github" --api-key ${{ secrets.GITHUB_TOKEN }}
+        
+      - name: Add Nuget Package Repository source
+        run: dotnet nuget add source --username  ${{ secrets.USERNAME }} --password ${{ secrets.NUGET_TOKEN }} --store-password-in-clear-text --name nuget ${{ secrets.URI_NUGET }}
 
       - name: Push to Nuget.org
-        run: dotnet nuget push **/*.nupkg --skip-duplicate --no-symbols true --api-key ${{ secrets.NUGET_TOKEN }}
+        run: dotnet nuget push **/*.nupkg --skip-duplicate --no-symbols true -s "nuget" --api-key ${{ secrets.NUGET_TOKEN }}
 
   clean:
     needs: deploy

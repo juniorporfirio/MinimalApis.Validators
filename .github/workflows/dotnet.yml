@@ -1,0 +1,31 @@
+name: CI Main
+env:
+  DOTNETSDKVERSION: 6.0.100
+on:
+  push:
+    branches: [ main ]
+  workflow_dispach:
+    branches: [ main ]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name:  Build, test, pack
+    steps:
+    - uses: actions/checkout@v2
+   
+    - name: Setup .NET SDK {{env.DOTNETSDKVERSION}}
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{env.DOTNETSDKVERSION}}
+    
+    - name: Restore dependencies
+      run: dotnet restore
+      
+    - name: Build
+      run: dotnet build --no-restore /p:BuildNumber=$BUILD_NUMBER /p:SourceRevisionId=$GITHUB_SHA /p:ContinuousIntegrationBuild=true
+      
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+      
+ 

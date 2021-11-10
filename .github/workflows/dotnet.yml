@@ -59,6 +59,9 @@ jobs:
       - name: Push to GitHub Packages
         run: dotnet nuget push **/*.nupkg -s "github" --api-key ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Push to Nuget.org
+        run: dotnet nuget push **/*.nupkg --skip-duplicate --no-symbols true --api-key ${{ secrets.NUGET_TOKEN }}
+
   clean:
     needs: deploy
     runs-on: ubuntu-latest

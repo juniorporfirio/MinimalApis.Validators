@@ -44,7 +44,7 @@ public class Customer
 
 
 ```
-More details in source example [Example With DataAnnotation](sample/ExampleWithValidatorDataAnnotation)
+More details in source example [Example With DataAnnotation](samples/ExampleWithValidatorDataAnnotation)
 
 
 ## Basic Usage FluentValidation
@@ -83,11 +83,10 @@ public class CustomerValidator : AbstractValidator<Customer>
 
 
 ```
-More details in source example [Example With FluentValidation](sample/ExampleWithValidatorFluentValidation)
+More details in source example [Example With FluentValidation](samples/ExampleWithValidatorFluentValidation)
 
 ## Credits and contributors
 
-[![](https://opencollective.com/html-react-parser/contributors.svg?width=890&button=false)](https://github.com/remarkablemark/html-react-parser/graphs/contributors)
 
 <b>Special credit to [Nick Chapsa](https://github.com/Elfocrash) to made it's possible.</b>
 

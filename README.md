@@ -10,7 +10,7 @@ Inspired in an example of [Nick Chapsa](https://github.com/Elfocrash).
 ### Core Library
 
 * [MinimalApis.Validators](src/MinimalApis.Validators/DataAnnotationValidatorExtension.cs) - Validator using DataAnnotation.
-* [FluentEmail.Validators.FluentValidation](src/MinimalValidator/FluentValidationExtension.cs) - Validator using package [FluentValidation](https://fluentvalidation.net/).
+* [MiimalApis.Validators.FluentValidation](src/MinimalValidator/FluentValidationExtension.cs) - Validator using package [FluentValidation](https://fluentvalidation.net/).
 
 ## How can use it
 Only use the key <b>WithValidator<></b> in your endpoint and finish:
